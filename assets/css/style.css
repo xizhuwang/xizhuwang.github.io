@@ -187,3 +187,31 @@ h1{margin:0 0 6px 0; font-size:30px}
   .hero-right{min-height:180px}
   .grid{grid-template-columns:1fr}
 }
+
+/* Project images */
+.proj-imglink{
+  display:block;
+  margin-top:10px;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid rgba(183,192,255,.14);
+  background: rgba(255,255,255,.02);
+}
+
+.proj-img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+  /* If you want consistent height cards, uncomment below:
+  height: 180px;
+  */
+}
+
+.proj-imglink:hover{
+  border-color: rgba(183,192,255,.28);
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+  transform: translateY(-1px);
+  transition: 160ms ease;
+}
+
