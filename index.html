@@ -92,51 +92,71 @@
 
     <!-- Projects (structured like your Google Sites “Project” block but more ATS/HR-oriented) -->
     <section id="projects" class="card">
-      <h2>Projects</h2>
+  <h2>Projects</h2>
 
-      <div class="grid">
-        <article class="proj">
-          <h3>TSMC 16nm Post-Layout RISC + MNIST CNN</h3>
-          <p class="p">
-            End-to-end MNIST inference (89% accuracy). Post-layout in TSMC 16nm ADFP: ~100 MHz, 2.46 mW dynamic power, area 17655.4 um<sup>2</sup>.
-          </p>
-          <div class="proj-tags">
-            <span class="tag">Verilog</span><span class="tag">Innovus</span><span class="tag">Assertions</span>
-          </div>
-        </article>
-
-        <article class="proj">
-          <h3>Standard-Cell Placement Legalization (Open-Source)</h3>
-          <p class="p">
-            C++ legalization to minimize displacement under constraints. 18% lower avg displacement; evaluated on ~50k cells with ~10 min runtime.
-          </p>
-          <div class="proj-tags">
-            <span class="tag">C++</span><span class="tag">EDA</span>
-            <a class="link" href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
-          </div>
-        </article>
-
-        <article class="proj">
-          <h3>Timing Correlator &amp; 16-QAM MIMO Detector (K-Best)</h3>
-          <p class="p">
-            Verilog implementation; synthesis and P&amp;R in TSMC 16nm ADFP. Post-synthesis area: 17655.4 um<sup>2</sup> (Design Compiler).
-          </p>
-          <div class="proj-tags">
-            <span class="tag">DSP</span><span class="tag">Verilog</span><span class="tag">DC</span>
-          </div>
-        </article>
-
-        <article class="proj">
-          <h3>Advanced Flash Memory Reliability Enhancement</h3>
-          <p class="p">
-            Improved error-mask robustness for TSMC 90nm; contributed to yield improvement during sign-off.
-          </p>
-          <div class="proj-tags">
-            <span class="tag">Reliability</span><span class="tag">Sign-off</span>
-          </div>
-        </article>
+  <div class="grid">
+    <article class="proj">
+      <h3>TSMC 16nm Post-Layout RISC + MNIST CNN</h3>
+      <p class="p">
+        End-to-end MNIST inference (89% accuracy). Post-layout in TSMC 16nm ADFP: ~100 MHz, 2.46 mW dynamic power, area 17655.4 um<sup>2</sup>.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Verilog</span><span class="tag">Innovus</span><span class="tag">Assertions</span>
       </div>
-    </section>
+
+      <!-- project image -->
+      <a class="proj-imglink" href="assets/img/projects/risc_cnn.png" target="_blank" rel="noopener">
+        <img class="proj-img" src="assets/img/projects/risc_cnn.png" alt="RISC CPU + CNN accelerator system overview" loading="lazy" />
+      </a>
+    </article>
+
+    <article class="proj">
+      <h3>Standard-Cell Placement Legalization (Open-Source)</h3>
+      <p class="p">
+        C++ legalization to minimize displacement under constraints. 18% lower avg displacement; evaluated on ~50k cells with ~10 min runtime.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">C++</span><span class="tag">EDA</span>
+        <a class="link" href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
+      </div>
+
+      <!-- project image -->
+      <a class="proj-imglink" href="assets/img/projects/legalization.png" target="_blank" rel="noopener">
+        <img class="proj-img" src="assets/img/projects/legalization.png" alt="Placement legalization visualization and displacement analysis" loading="lazy" />
+      </a>
+    </article>
+
+    <article class="proj">
+      <h3>Timing Correlator &amp; 16-QAM MIMO Detector (K-Best)</h3>
+      <p class="p">
+        Verilog implementation; synthesis and P&amp;R in TSMC 16nm ADFP. Post-synthesis area: 17655.4 um<sup>2</sup> (Design Compiler).
+      </p>
+      <div class="proj-tags">
+        <span class="tag">DSP</span><span class="tag">Verilog</span><span class="tag">DC</span>
+      </div>
+
+      <!-- project image -->
+      <a class="proj-imglink" href="assets/img/projects/kbest_detector.png" target="_blank" rel="noopener">
+        <img class="proj-img" src="assets/img/projects/kbest_detector.png" alt="K-Best pipeline / architecture diagram" loading="lazy" />
+      </a>
+    </article>
+
+    <article class="proj">
+      <h3>Advanced Flash Memory Reliability Enhancement</h3>
+      <p class="p">
+        Improved error-mask robustness for TSMC 90nm; contributed to yield improvement during sign-off.
+      </p>
+      <div class="proj-tags">
+        <span class="tag">Reliability</span><span class="tag">Sign-off</span>
+      </div>
+
+      <!-- project image -->
+      <a class="proj-imglink" href="assets/img/projects/flash_memory.png" target="_blank" rel="noopener">
+        <img class="proj-img" src="assets/img/projects/flash_memory.png" alt="Flash memory architecture / remapper-bist-demapper layout" loading="lazy" />
+      </a>
+    </article>
+  </div>
+</section>
 
     <!-- Experience -->
     <section id="exp" class="card">
