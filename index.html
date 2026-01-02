@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Xi-Zhu Wang | ASIC / Digital IC</title>
+  <meta name="description" content="ASIC / Digital IC Design, ML Accelerator Hardware, HBM-PIM scheduling (ACM SAC '26)." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-left">
+        <h1>Xi-Zhu Wang</h1>
+        <p class="subtitle">ASIC / Digital IC Design · ML Accelerator Hardware</p>
+        <p class="meta">Taipei/Taoyuan, Taiwan · Open to relocation</p>
+        <div class="buttons">
+          <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="mailto:z790305000@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="hero-right" aria-label="Banner"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Publication</h2>
+      <p>
+        <strong>ACM SAC ’26</strong> — Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing in-Memory Accelerators.
+        <a href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener">doi:10.1145/3748522.3779794</a>
+      </p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>TSMC 16nm post-layout RISC + MNIST CNN</strong>: ~100 MHz, 2.46 mW dynamic, 89% accuracy.</li>
+          <li><strong>Placement Legalization (C++)</strong>: ~50k cells, ~10 min runtime, 18% lower avg displacement.
+            <a href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
+          </li>
+          <li><strong>Computer Organization TA</strong>: ModelSim-based RTL debug + OpenROAD labs; autograding scripts.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Skills</h2>
+        <ul>
+          <li><strong>RTL/Verif</strong>: Verilog, VCS/Verdi, ModelSim, SV properties/assertions, Jasper</li>
+          <li><strong>PD</strong>: DC/ICC2, Innovus, Calibre DRC/LVS</li>
+          <li><strong>SW</strong>: C/C++, Python, Linux, Git</li>
+          <li><strong>FPGA</strong>: Vivado, Vitis HLS/Vitis-AI</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>TSRI Training</h2>
+      <p class="compact">
+        Design Compiler (Logic Synthesis, ADFP–TSMC 16nm); IC Compiler II (Cell-based P&amp;R &amp; Verification);
+        Catapult HLS (AI HW Architecture); SystemVerilog; Jasper Formal Property Verification; Emerging NVM Array (Design/Analysis/Testing)
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="y"></span> Xi-Zhu Wang</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
