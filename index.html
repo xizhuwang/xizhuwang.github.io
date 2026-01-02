@@ -5,63 +5,184 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xi-Zhu Wang | ASIC / Digital IC</title>
   <meta name="description" content="ASIC / Digital IC Design, ML Accelerator Hardware, HBM-PIM scheduling (ACM SAC '26)." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Xi-Zhu Wang | ASIC / Digital IC" />
+  <meta property="og:description" content="ASIC / Digital IC Design · ML Accelerator Hardware · ACM SAC '26" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/banner.png" />
+
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
-  <header class="hero">
-    <div class="hero-inner">
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top">Xi-Zhu Wang<span class="brand-zh"> 王璽鑄</span></a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#pub">Publication</a>
+        <a href="#projects">Projects</a>
+        <a href="#exp">Experience</a>
+        <a href="#tsri">TSRI</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section class="hero">
       <div class="hero-left">
-        <h1>Xi-Zhu Wang</h1>
+        <h1>Xi-Zhu Wang <span class="zh">(王璽鑄)</span></h1>
         <p class="subtitle">ASIC / Digital IC Design · ML Accelerator Hardware</p>
-        <p class="meta">Taipei/Taoyuan, Taiwan · Open to relocation</p>
-        <div class="buttons">
+        <p class="meta">NTUST (M.S. EE) · Taipei/Taoyuan · Open to relocation</p>
+
+        <div class="cta">
           <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
           <a class="btn" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub</a>
           <a class="btn" href="mailto:z790305000@gmail.com">Email</a>
         </div>
-      </div>
-      <div class="hero-right" aria-label="Banner"></div>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="card">
-      <h2>Publication</h2>
-      <p>
-        <strong>ACM SAC ’26</strong> — Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing in-Memory Accelerators.
-        <a href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener">doi:10.1145/3748522.3779794</a>
+        <div class="chips">
+          <span class="chip">RTL</span>
+          <span class="chip">Synthesis</span>
+          <span class="chip">P&amp;R</span>
+          <span class="chip">Formal Assertions</span>
+          <span class="chip">HBM-PIM</span>
+          <span class="chip">LLM Inference</span>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <!-- Put your penguin banner here -->
+        <img class="banner" src="assets/img/banner.png" alt="Blue-purple IC design penguin banner" />
+      </div>
+    </section>
+
+    <!-- About (refined from your Google Sites “首頁” layout) -->
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p class="p">
+        I am a M.S. student at NTUST focusing on digital IC design and ML accelerator systems.
+        I work across RTL-to-GDS flow (DC/ICC2, Innovus, Calibre) and build reproducible evaluation scripts in Python/C++.
+        Current research: multi-user scheduling for LLM inference on HBM-based Processing-in-Memory (PIM).
       </p>
+      <ul class="kv">
+        <li><span class="k">Email</span><span class="v"><a href="mailto:z790305000@gmail.com">z790305000@gmail.com</a></span></li>
+        <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/xizhuwang" target="_blank" rel="noopener">github.com/xizhuwang</a></span></li>
+      </ul>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>Projects</h2>
-        <ul>
-          <li><strong>TSMC 16nm post-layout RISC + MNIST CNN</strong>: ~100 MHz, 2.46 mW dynamic, 89% accuracy.</li>
-          <li><strong>Placement Legalization (C++)</strong>: ~50k cells, ~10 min runtime, 18% lower avg displacement.
-            <a href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
-          </li>
-          <li><strong>Computer Organization TA</strong>: ModelSim-based RTL debug + OpenROAD labs; autograding scripts.</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>Skills</h2>
-        <ul>
-          <li><strong>RTL/Verif</strong>: Verilog, VCS/Verdi, ModelSim, SV properties/assertions, Jasper</li>
-          <li><strong>PD</strong>: DC/ICC2, Innovus, Calibre DRC/LVS</li>
-          <li><strong>SW</strong>: C/C++, Python, Linux, Git</li>
-          <li><strong>FPGA</strong>: Vivado, Vitis HLS/Vitis-AI</li>
-        </ul>
+    <!-- Publication -->
+    <section id="pub" class="card">
+      <h2>Publication</h2>
+      <div class="pub">
+        <div class="pub-title">
+          <strong>ACM SAC ’26</strong> — Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing in-Memory Accelerators
+        </div>
+        <div class="pub-meta">
+          <span class="tag">Conference Paper</span>
+          <span class="tag">HBM-PIM</span>
+          <span class="tag">Scheduling</span>
+          <a class="doi" href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener">doi:10.1145/3748522.3779794</a>
+        </div>
       </div>
     </section>
 
-    <section class="card">
+    <!-- Projects (structured like your Google Sites “Project” block but more ATS/HR-oriented) -->
+    <section id="projects" class="card">
+      <h2>Projects</h2>
+
+      <div class="grid">
+        <article class="proj">
+          <h3>TSMC 16nm Post-Layout RISC + MNIST CNN</h3>
+          <p class="p">
+            End-to-end MNIST inference (89% accuracy). Post-layout in TSMC 16nm ADFP: ~100 MHz, 2.46 mW dynamic power, area 17655.4 um<sup>2</sup>.
+          </p>
+          <div class="proj-tags">
+            <span class="tag">Verilog</span><span class="tag">Innovus</span><span class="tag">Assertions</span>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3>Standard-Cell Placement Legalization (Open-Source)</h3>
+          <p class="p">
+            C++ legalization to minimize displacement under constraints. 18% lower avg displacement; evaluated on ~50k cells with ~10 min runtime.
+          </p>
+          <div class="proj-tags">
+            <span class="tag">C++</span><span class="tag">EDA</span>
+            <a class="link" href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3>Timing Correlator &amp; 16-QAM MIMO Detector (K-Best)</h3>
+          <p class="p">
+            Verilog implementation; synthesis and P&amp;R in TSMC 16nm ADFP. Post-synthesis area: 17655.4 um<sup>2</sup> (Design Compiler).
+          </p>
+          <div class="proj-tags">
+            <span class="tag">DSP</span><span class="tag">Verilog</span><span class="tag">DC</span>
+          </div>
+        </article>
+
+        <article class="proj">
+          <h3>Advanced Flash Memory Reliability Enhancement</h3>
+          <p class="p">
+            Improved error-mask robustness for TSMC 90nm; contributed to yield improvement during sign-off.
+          </p>
+          <div class="proj-tags">
+            <span class="tag">Reliability</span><span class="tag">Sign-off</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="exp" class="card">
+      <h2>Experience</h2>
+
+      <div class="exp">
+        <div class="exp-h">
+          <strong>Teaching Assistant — Computer Organization</strong>
+          <span class="exp-meta">NTUST · Apr 2025 – Jul 2025</span>
+        </div>
+        <ul>
+          <li>Guided RTL debugging for CPU datapath/control labs using <strong>ModelSim</strong> (waveform-based verification).</li>
+          <li>Assisted <strong>OpenROAD</strong> implementation exercises (flow setup, timing/power report interpretation); built Python/Shell autograding scripts.</li>
+        </ul>
+      </div>
+
+      <div class="exp">
+        <div class="exp-h">
+          <strong>Research Assistant / EDA Server Administrator</strong>
+          <span class="exp-meta">NTUST · Jun 2024 – Present</span>
+        </div>
+        <ul>
+          <li>Managed shared EDA infrastructure and tape-out related flows; improved license/job workflow and reduced preparation time by 20%.</li>
+          <li>Supported reproducible build environments and regression stability for research users.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TSRI -->
+    <section id="tsri" class="card">
       <h2>TSRI Training</h2>
-      <p class="compact">
+      <p class="p compact">
         Design Compiler (Logic Synthesis, ADFP–TSMC 16nm); IC Compiler II (Cell-based P&amp;R &amp; Verification);
         Catapult HLS (AI HW Architecture); SystemVerilog; Jasper Formal Property Verification; Emerging NVM Array (Design/Analysis/Testing)
       </p>
+    </section>
+
+    <!-- Contact / Links -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div class="contact">
+        <a class="btn primary" href="mailto:z790305000@gmail.com">z790305000@gmail.com</a>
+        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a class="btn" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://github.com/xizhuwang/socv-1132" target="_blank" rel="noopener">SoC Course Repo</a>
+      </div>
     </section>
 
     <footer class="footer">
