@@ -98,10 +98,6 @@ h1 span { color: var(--blue); }
 
 .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
 .project-card { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: white; box-shadow: 0 10px 30px rgba(15, 35, 55, .05); }
-.project-wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.12fr .88fr; }
-.project-media { min-height: 360px; margin: 0; display: grid; place-items: center; overflow: hidden; background: #030712; }
-.project-media img { width: 100%; height: 100%; object-fit: contain; }
-.architecture-media { aspect-ratio: 16 / 10; }
 .project-body { padding: 27px; }
 .project-index { margin-bottom: 18px; display: grid; place-items: center; width: 46px; aspect-ratio: 1; border-radius: 14px; color: var(--blue); background: #e8efff; font-size: 13px; font-weight: 900; }
 .tag-row { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 12px; }
@@ -182,8 +178,6 @@ h1 span { color: var(--blue); }
   .profile-grid, .research-layout { grid-template-columns: 1fr; gap: 38px; }
   .split-heading { display: block; }
   .split-heading > p { margin-top: 14px; }
-  .project-wide { grid-template-columns: 1fr; }
-  .project-media { min-height: 300px; }
   .flow-grid { grid-template-columns: repeat(3, 1fr); }
   .contact-inner { display: block; }
   .contact-actions { margin-top: 28px; justify-content: flex-start; }
@@ -203,8 +197,6 @@ h1 span { color: var(--blue); }
   .architecture li { grid-template-columns: 42px minmax(0, 1fr); padding: 14px; }
   .section { padding-block: 66px; }
   .profile-lead { font-size: 19px; }
-  .project-media { min-height: 220px; }
-  .architecture-media { aspect-ratio: 4 / 3; }
   .metric-list { grid-template-columns: 1fr; }
   .project-card dl { grid-template-columns: 1fr; }
   .implementation-card figure { min-height: 350px; padding: 18px; }
