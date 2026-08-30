@@ -3,215 +3,123 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Xi-Zhu Wang | ASIC / Digital IC</title>
-  <meta name="description" content="ASIC / Digital IC Design, ML Accelerator Hardware, HBM-PIM scheduling (ACM SAC '26)." />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Xi-Zhu Wang | ASIC / Digital IC" />
-  <meta property="og:description" content="ASIC / Digital IC Design · ML Accelerator Hardware · ACM SAC '26" />
+  <title>Xi-Zhu Wang | Digital IC, SoC &amp; HBM-PIM</title>
+  <meta name="description" content="Xi-Zhu Wang — digital IC, processor/SoC, AI accelerator and HBM-PIM engineer. NTUST M.S. EE, available Sep. 2026." />
+  <meta name="theme-color" content="#071a2b" />
+  <meta property="og:title" content="Xi-Zhu Wang | Digital IC, SoC &amp; HBM-PIM" />
+  <meta property="og:description" content="RTL design · Processor/SoC · AI acceleration · HBM-PIM · ASIC implementation" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="assets/img/banner.png" />
-
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
-  <header class="topbar">
-    <div class="topbar-inner">
-      <a class="brand" href="#top">Xi-Zhu Wang<span class="brand-zh"> 王璽鑄</span></a>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#pub">Publication</a>
-        <a href="#projects">Projects</a>
-        <a href="#exp">Experience</a>
-        <a href="#tsri">TSRI</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar"><div class="shell topbar-inner">
+    <a class="brand" href="#top" aria-label="Back to top"><span class="brand-mark">XW</span><span>Xi-Zhu Wang <span class="brand-zh">王璽鑄</span></span></a>
+    <nav class="nav" aria-label="Primary navigation"><a href="#profile">Profile</a><a href="#research">Research</a><a href="#highlights">Highlights</a><a href="#repositories">Repositories</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
+  </div></header>
 
-  <main id="top" class="container">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-left">
-        <h1>Xi-Zhu Wang <span class="zh">(王璽鑄)</span></h1>
-        <p class="subtitle">ASIC / Digital IC Design · ML Accelerator Hardware</p>
-        <p class="meta">NTUST (M.S. EE) · Taipei/Taoyuan · Open to relocation</p>
-
-        <div class="cta">
-          <a class="btn primary" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-          <a class="btn" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub</a>
-          <a class="btn" href="mailto:z790305000@gmail.com">Email</a>
-        </div>
-
-        <div class="chips">
-          <span class="chip">RTL</span>
-          <span class="chip">Synthesis</span>
-          <span class="chip">P&amp;R</span>
-          <span class="chip">Formal Assertions</span>
-          <span class="chip">HBM-PIM</span>
-          <span class="chip">LLM Inference</span>
-        </div>
+  <main id="main">
+    <section id="top" class="hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">DIGITAL IC · PROCESSOR / SOC · AI ACCELERATION</p>
+        <h1>Architecture to RTL.<br /><span>Verification to silicon.</span></h1>
+        <p class="hero-lead">I am Xi-Zhu Wang, an NTUST electrical engineering graduate working across processor and accelerator RTL, HBM-PIM systems, verification, EDA algorithms and ASIC implementation.</p>
+        <p class="availability"><span aria-hidden="true"></span> Graduated Aug. 2026 · Available Sep. 2026</p>
+        <div class="cta"><a class="button primary" href="assets/resume.pdf" target="_blank" rel="noopener">View résumé</a><a class="button" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub profile</a><a class="button quiet" href="mailto:z790305000@gmail.com">Email me</a></div>
+        <dl class="hero-stats" aria-label="Profile highlights"><div><dt>16 / 90 nm</dt><dd>implementation experience</dd></div><div><dt>ACM SAC 2026</dt><dd>second-author paper</dd></div><div><dt>17 repositories</dt><dd>public engineering work</dd></div></dl>
       </div>
-
-      <div class="hero-right">
-        <!-- Put your penguin banner here -->
-        <img class="banner" src="assets/img/banner.png" alt="Blue-purple IC design penguin banner" />
+      <div class="architecture" aria-label="System architecture relationship">
+        <div class="architecture-head"><span>System relationship</span><strong>CPU to HBM-PIM</strong></div>
+        <ol>
+          <li><span class="step">01</span><div><strong>Compute masters</strong><small>CPU · AI accelerator</small></div></li>
+          <li><span class="step">02</span><div><strong>SoC interconnect</strong><small>Bus · control · data movement</small></div></li>
+          <li><span class="step">03</span><div><strong>Memory interface</strong><small>HBM controller · PIM commands</small></div></li>
+          <li><span class="step">04</span><div><strong>HBM-PIM memory stack</strong><small>Memory banks · PIM compute units</small></div></li>
+        </ol>
+        <p>HBM-PIM is a memory-centric AI-acceleration architecture, not a peripheral disconnected from the memory hierarchy.</p>
       </div>
     </section>
 
-    <!-- About (refined from your Google Sites “首頁” layout) -->
-    <section id="about" class="card">
-      <h2>About</h2>
-      <p class="p">
-        I am a M.S. student at NTUST focusing on digital IC design and ML accelerator systems.
-        I work across RTL-to-GDS flow (DC/ICC2, Innovus, Calibre) and build reproducible evaluation scripts in Python/C++.
-        Current research: multi-user scheduling for LLM inference on HBM-based Processing-in-Memory (PIM).
-      </p>
-      <ul class="kv">
-        <li><span class="k">Email</span><span class="v"><a href="mailto:z790305000@gmail.com">z790305000@gmail.com</a></span></li>
-        <li><span class="k">GitHub</span><span class="v"><a href="https://github.com/xizhuwang" target="_blank" rel="noopener">github.com/xizhuwang</a></span></li>
-      </ul>
-    </section>
-
-    <!-- Publication -->
-    <section id="pub" class="card">
-      <h2>Publication</h2>
-      <div class="pub">
-        <div class="pub-title">
-          <strong>ACM SAC ’26</strong> — Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing in-Memory Accelerators
-        </div>
-        <div class="pub-meta">
-          <span class="tag">Conference Paper</span>
-          <span class="tag">HBM-PIM</span>
-          <span class="tag">Scheduling</span>
-          <a class="doi" href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener">doi:10.1145/3748522.3779794</a>
+    <section id="profile" class="section shell">
+      <div class="section-heading"><p class="eyebrow">PROFILE</p><h2>A hardware background with a system-level view</h2></div>
+      <div class="profile-grid">
+        <p class="profile-lead">My strongest work connects <strong>microarchitecture</strong>, <strong>data movement</strong> and <strong>implementation constraints</strong>. I can discuss what the system should do, how its RTL behaves, how it is verified and what changes after synthesis and place-and-route.</p>
+        <div class="competency-grid">
+          <article><span>01</span><h3>Processor &amp; SoC</h3><p>CPU pipelines, memory-mapped accelerator integration, bus concepts, CDC and interface design.</p></article>
+          <article><span>02</span><h3>AI &amp; memory systems</h3><p>CNN accelerators, mixed precision, multi-user LLM inference, HBM/HBM-PIM and Ramulator2.</p></article>
+          <article><span>03</span><h3>Verification &amp; DFT exposure</h3><p>Golden models, assertions, corner cases, formal/SAT concepts, BIST-style checking and fault remapping.</p></article>
+          <article><span>04</span><h3>ASIC &amp; EDA</h3><p>Synthesis, P&amp;R, STA, DRC/LVS, sign-off reasoning, placement legalization and clock-tree algorithms.</p></article>
         </div>
       </div>
     </section>
 
-    <!-- Projects (structured like your Google Sites “Project” block but more ATS/HR-oriented) -->
-    <section id="projects" class="card">
-  <h2>Projects</h2>
-
-  <div class="grid">
-    <article class="proj">
-      <h3>TSMC 16nm Post-Layout RISC + MNIST CNN</h3>
-      <p class="p">
-        End-to-end MNIST inference (89% accuracy). Post-layout in TSMC 16nm ADFP: ~100 MHz, 2.46 mW dynamic power, area 17655.4 um<sup>2</sup>.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Verilog</span><span class="tag">Innovus</span><span class="tag">Assertions</span>
+    <section id="research" class="section section-tint"><div class="shell research-layout">
+      <div class="research-copy">
+        <p class="eyebrow">GRADUATE RESEARCH</p>
+        <h2>Adaptive Mixed-Precision Architecture for Multi-User Large Language Model Inference on HBM-Based Processing-in-Memory</h2>
+        <p>My thesis studies how concurrent LLM requests can share HBM-PIM resources while balancing latency, memory capacity and inference quality. The architecture coordinates CPU-side control, scheduling, the SoC bus, HBM controller, memory banks and PIM compute units.</p>
+        <div class="publication"><span>ACM SAC 2026</span><p><strong>Second author</strong> · “Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators”</p><a href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener">View publication ↗</a></div>
       </div>
-
-      <!-- project image -->
-      <a class="proj-imglink" href="assets/img/projects/risc_cnn.png" target="_blank" rel="noopener">
-        <img class="proj-img" src="assets/img/projects/risc_cnn.png" alt="RISC CPU + CNN accelerator system overview" loading="lazy" />
-      </a>
-    </article>
-
-    <article class="proj">
-      <h3>Standard-Cell Placement Legalization (Open-Source)</h3>
-      <p class="p">
-        C++ legalization to minimize displacement under constraints. 18% lower avg displacement; evaluated on ~50k cells with ~10 min runtime.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">C++</span><span class="tag">EDA</span>
-        <a class="link" href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">repo</a>
+      <div class="scope-grid" aria-label="Research scope">
+        <article><span>System</span><h3>Multi-user evaluation</h3><p>Ramulator2 simulation for Llama 3.1 8B and Mixtral 8×7B workloads.</p></article>
+        <article><span>Architecture</span><h3>Adaptive mixed precision</h3><p>Scheduling, precision selection, data mapping and resource contention analysis.</p></article>
+        <article><span>Hardware</span><h3>Single-PCU implementation</h3><p>TSMC ADFP 16 nm post-layout and sign-off scope, kept distinct from the larger simulated system.</p></article>
       </div>
+    </div></section>
 
-      <!-- project image -->
-      <a class="proj-imglink" href="assets/img/projects/legalization.png" target="_blank" rel="noopener">
-        <img class="proj-img" src="assets/img/projects/legalization.png" alt="Placement legalization visualization and displacement analysis" loading="lazy" />
-      </a>
-    </article>
-
-    <article class="proj">
-      <h3>Timing Correlator &amp; 16-QAM MIMO Detector (K-Best)</h3>
-      <p class="p">
-        Verilog implementation; synthesis and P&amp;R in TSMC 16nm ADFP. Post-synthesis area: 17655.4 um<sup>2</sup> (Design Compiler).
-      </p>
-      <div class="proj-tags">
-        <span class="tag">DSP</span><span class="tag">Verilog</span><span class="tag">DC</span>
-      </div>
-
-      <!-- project image -->
-      <a class="proj-imglink" href="assets/img/projects/kbest_detector.png" target="_blank" rel="noopener">
-        <img class="proj-img" src="assets/img/projects/kbest_detector.png" alt="K-Best pipeline / architecture diagram" loading="lazy" />
-      </a>
-    </article>
-
-    <article class="proj">
-      <h3>Advanced Flash Memory Reliability Enhancement</h3>
-      <p class="p">
-        Improved error-mask robustness for TSMC 90nm; contributed to yield improvement during sign-off.
-      </p>
-      <div class="proj-tags">
-        <span class="tag">Reliability</span><span class="tag">Sign-off</span>
-      </div>
-
-      <!-- project image -->
-      <a class="proj-imglink" href="assets/img/projects/flash_memory.png" target="_blank" rel="noopener">
-        <img class="proj-img" src="assets/img/projects/flash_memory.png" alt="Flash memory architecture / remapper-bist-demapper layout" loading="lazy" />
-      </a>
-    </article>
-  </div>
-</section>
-
-    <!-- Experience -->
-    <section id="exp" class="card">
-      <h2>Experience</h2>
-
-      <div class="exp">
-        <div class="exp-h">
-          <strong>Teaching Assistant — Computer Organization</strong>
-          <span class="exp-meta">NTUST · Apr 2025 – Jul 2025</span>
-        </div>
-        <ul>
-          <li>Guided RTL debugging for CPU datapath/control labs using <strong>ModelSim</strong> (waveform-based verification).</li>
-          <li>Assisted <strong>OpenROAD</strong> implementation exercises (flow setup, timing/power report interpretation); built Python/Shell autograding scripts.</li>
-        </ul>
-      </div>
-
-      <div class="exp">
-        <div class="exp-h">
-          <strong>Research Assistant / EDA Server Administrator</strong>
-          <span class="exp-meta">NTUST · Jun 2024 – Present</span>
-        </div>
-        <ul>
-          <li>Managed shared EDA infrastructure and tape-out related flows; improved license/job workflow and reduced preparation time by 20%.</li>
-          <li>Supported reproducible build environments and regression stability for research users.</li>
-        </ul>
+    <section id="highlights" class="section shell">
+      <div class="section-heading split-heading"><div><p class="eyebrow">SELECTED HIGHLIGHTS</p><h2>Projects with interview-ready depth</h2></div><p>Prioritized for digital IC, SoC, verification, physical-design and EDA roles.</p></div>
+      <div class="highlight-grid">
+        <article class="highlight featured"><div class="project-index">01</div><div><div class="tag-row"><span>SystemVerilog</span><span>Streaming DSP</span></div><h3>1536-point Streaming FFT</h3><p>Mixed-radix 3 × 512 streaming architecture with fixed-point twiddle tables, behavioral memory wrappers and a public self-checking regression.</p><dl><div><dt>34.73 dB</dt><dd>public SNR snapshot</dd></div><div><dt>416.27 MS/s</dt><dd>reported throughput</dd></div></dl><a href="https://github.com/xizhuwang/1536FFT" target="_blank" rel="noopener">Open repository ↗</a></div></article>
+        <article class="highlight"><div class="project-index">02</div><div class="tag-row"><span>SoC</span><span>Verilog</span></div><h3>RISC CPU + MNIST CNN Accelerator</h3><p>Integrated a 32-bit RISC processor with a CNN accelerator and shared-memory/control path; completed RTL, verification and 16 nm implementation work.</p><a href="https://github.com/xizhuwang/MNIST_CNN_Accelerator_with_RISC_CPU" target="_blank" rel="noopener">Open repository ↗</a></article>
+        <article class="highlight"><div class="project-index">03</div><div class="tag-row"><span>ECC</span><span>DFT / Reliability</span></div><h3>RS(15,11) HBMPIM Protection</h3><p>Standalone decoder and vector-level protection wrapper with syndrome calculation, error location/correction and verification-oriented fault injection.</p><a href="https://github.com/xizhuwang/Reed-Solomon-decoder" target="_blank" rel="noopener">Open repository ↗</a></article>
+        <article class="highlight"><div class="project-index">04</div><div class="tag-row"><span>Accelerator</span><span>Verilog</span></div><h3>Simulated Annealing Accelerator</h3><p>Graph-processing RTL with SRAM-first storage, a start/result protocol, public testbench vectors and an energy-ratio quality target.</p><a href="https://github.com/xizhuwang/Simulated_Annealing" target="_blank" rel="noopener">Open repository ↗</a></article>
+        <article class="highlight"><div class="project-index">05</div><div class="tag-row"><span>DSP RTL</span><span>Synthesis</span></div><h3>Digital Communication IC Design</h3><p>Timing correlator through RTL and synthesis, plus a Verilog K-best 16-QAM MIMO detector.</p><a href="https://github.com/xizhuwang/Digital-Communication-IC-Design-2025-" target="_blank" rel="noopener">Open repository ↗</a></article>
+        <article class="highlight"><div class="project-index">06</div><div class="tag-row"><span>EDA</span><span>C++</span></div><h3>Placement Legalization &amp; CTS</h3><p>Implemented row-based standard-cell legalization and a hierarchical centroid-based clock-tree construction algorithm with obstacle checks.</p><div class="link-pair"><a href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener">Legalization ↗</a><a href="https://github.com/xizhuwang/Clock-Tree-Synthesis" target="_blank" rel="noopener">CTS ↗</a></div></article>
+        <article class="highlight"><div class="project-index">07</div><div class="tag-row"><span>Formal</span><span>SAT / CNF</span></div><h3>SoC Verification Framework</h3><p>Worked with AIG/BDD/SAT representations and verification applications including equivalence checking and model checking.</p><a href="https://github.com/xizhuwang/socv-1132" target="_blank" rel="noopener">Open repository ↗</a></article>
+        <article class="highlight"><div class="project-index">08</div><div class="tag-row"><span>90 nm</span><span>Reliability / DFT</span></div><h3>Advanced Flash-memory Reliability</h3><p>Explored built-in test/check, fault detection and address remapping, then completed post-layout verification and sign-off.</p></article>
       </div>
     </section>
 
-    <!-- TSRI -->
-    <section id="tsri" class="card">
-      <h2>TSRI Training</h2>
-      <p class="p compact">
-        Design Compiler (Logic Synthesis, ADFP–TSMC 16nm); IC Compiler II (Cell-based P&amp;R &amp; Verification);
-        Catapult HLS (AI HW Architecture); SystemVerilog; Jasper Formal Property Verification; Emerging NVM Array (Design/Analysis/Testing)
-      </p>
-    </section>
+    <section id="repositories" class="section repository-section"><div class="shell">
+      <div class="section-heading split-heading"><div><p class="eyebrow">COMPLETE PUBLIC INDEX</p><h2>All 17 public project repositories</h2></div><p>Core hardware work comes first; earlier software projects remain visible without competing with the IC-design narrative.</p></div>
+      <div class="repo-group"><div class="repo-group-head"><span>01</span><div><h3>Digital hardware, accelerators &amp; memory</h3><p>Seven repositories</p></div></div><div class="repo-list">
+        <a href="https://github.com/xizhuwang/HBM4_Controller" target="_blank" rel="noopener"><strong>HBM4 Controller</strong><span>Work in progress · public placeholder</span><em>WIP</em></a>
+        <a href="https://github.com/xizhuwang/1536FFT" target="_blank" rel="noopener"><strong>1536-point Streaming FFT</strong><span>Mixed-radix streaming RTL</span><em>SystemVerilog</em></a>
+        <a href="https://github.com/xizhuwang/Simulated_Annealing" target="_blank" rel="noopener"><strong>Simulated Annealing Accelerator</strong><span>Graph-optimization hardware</span><em>Verilog</em></a>
+        <a href="https://github.com/xizhuwang/Reed-Solomon-decoder" target="_blank" rel="noopener"><strong>Reed–Solomon Decoder</strong><span>HBMPIM protection wrapper</span><em>Verilog</em></a>
+        <a href="https://github.com/xizhuwang/MNIST_CNN_Accelerator_with_RISC_CPU" target="_blank" rel="noopener"><strong>RISC + MNIST CNN</strong><span>Processor–accelerator SoC</span><em>Verilog</em></a>
+        <a href="https://github.com/xizhuwang/Hardware-Circuit-Design-of-Multi-frequency-LeNet-5-Convolutional-Neural-Network" target="_blank" rel="noopener"><strong>Multi-frequency LeNet-5</strong><span>FPGA CNN hardware</span><em>Verilog</em></a>
+        <a href="https://github.com/xizhuwang/llama.cpp_python_pynqz2" target="_blank" rel="noopener"><strong>llama.cpp on PYNQ-Z2</strong><span>ARM Cortex-A9 deployment notes</span><em>ARM / Python</em></a>
+      </div></div>
+      <div class="repo-group"><div class="repo-group-head"><span>02</span><div><h3>EDA, verification &amp; automation</h3><p>Four repositories</p></div></div><div class="repo-list">
+        <a href="https://github.com/xizhuwang/Clock-Tree-Synthesis" target="_blank" rel="noopener"><strong>Clock Tree Synthesis</strong><span>Hierarchical centroid routing</span><em>C++</em></a>
+        <a href="https://github.com/xizhuwang/Standard-Cell-Placement-Legalization" target="_blank" rel="noopener"><strong>Placement Legalization</strong><span>Row assignment and displacement optimization</span><em>C++</em></a>
+        <a href="https://github.com/xizhuwang/socv-1132" target="_blank" rel="noopener"><strong>SoC Verification</strong><span>AIG · BDD · SAT · formal applications</span><em>C++</em></a>
+        <a href="https://github.com/xizhuwang/OpenROAD_shellscript" target="_blank" rel="noopener"><strong>OpenROAD Automation</strong><span>Batch area/slack grading and report conversion</span><em>Shell / Python</em></a>
+      </div></div>
+      <div class="repo-group"><div class="repo-group-head"><span>03</span><div><h3>Communication IC</h3><p>One repository</p></div></div><div class="repo-list single"><a href="https://github.com/xizhuwang/Digital-Communication-IC-Design-2025-" target="_blank" rel="noopener"><strong>Digital Communication IC Design</strong><span>Timing correlator · K-best 16-QAM MIMO detector</span><em>Verilog</em></a></div></div>
+      <div class="repo-group subdued"><div class="repo-group-head"><span>04</span><div><h3>Earlier software &amp; coursework</h3><p>Five repositories</p></div></div><div class="repo-list">
+        <a href="https://github.com/xizhuwang/Assembly-language-Bubble-Sorting" target="_blank" rel="noopener"><strong>Assembly Bubble Sorting</strong><span>Array sorting and display</span><em>Assembly</em></a>
+        <a href="https://github.com/xizhuwang/Assembly-language-To-create-a-text-box-where-users-can-define-the-border-text-and-content-text-by-th" target="_blank" rel="noopener"><strong>Assembly Text Box</strong><span>User-defined border and content</span><em>Assembly</em></a>
+        <a href="https://github.com/xizhuwang/Assembly-language-Running-ManGame" target="_blank" rel="noopener"><strong>Assembly Running-Man Game</strong><span>Interactive course project</span><em>Assembly</em></a>
+        <a href="https://github.com/xizhuwang/SS-EXP" target="_blank" rel="noopener"><strong>Signals &amp; Systems Experiments</strong><span>Jupyter-based coursework</span><em>Notebook</em></a>
+        <a href="https://github.com/xizhuwang/Python-Download-Video-from-Youtube" target="_blank" rel="noopener"><strong>YouTube Download Utility</strong><span>Python GUI and metadata workflow</span><em>Python</em></a>
+      </div></div>
+    </div></section>
 
-    <!-- Contact / Links -->
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <div class="contact">
-        <a class="btn primary" href="mailto:z790305000@gmail.com">z790305000@gmail.com</a>
-        <a class="btn" href="assets/resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-        <a class="btn" href="https://github.com/xizhuwang" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://github.com/xizhuwang/socv-1132" target="_blank" rel="noopener">SoC Course Repo</a>
-      </div>
-    </section>
+    <section id="skills" class="section section-tint"><div class="shell">
+      <div class="section-heading"><p class="eyebrow">ENGINEERING TOOLBOX</p><h2>From specification to sign-off</h2></div>
+      <div class="flow-grid" aria-label="ASIC workflow"><div><span>01</span><strong>Architecture</strong><small>spec · dataflow · interfaces</small></div><div><span>02</span><strong>RTL</strong><small>Verilog · SystemVerilog</small></div><div><span>03</span><strong>Verify</strong><small>golden model · SVA · formal</small></div><div><span>04</span><strong>Implement</strong><small>DC · ICC2 · Innovus</small></div><div><span>05</span><strong>Sign-off</strong><small>STA · DRC/LVS · PPA</small></div></div>
+      <div class="skills-grid"><div><h3>Design &amp; verification</h3><p>CPU pipeline · FSM · CDC · FIFO · AXI concepts · SystemVerilog/SVA · BIST/DFT fundamentals</p></div><div><h3>Implementation</h3><p>Design Compiler · ICC2 · Innovus · PrimeTime concepts · Calibre DRC/LVS · OpenROAD</p></div><div><h3>Systems &amp; automation</h3><p>Ramulator2 · Python · Shell · C/C++ · Git · regression and report parsing</p></div><div><h3>Platforms</h3><p>Xilinx ZCU102 · PYNQ-Z2 · ARM Cortex-A9 · processor/accelerator prototyping</p></div></div>
+    </div></section>
 
-    <footer class="footer">
-      <span>© <span id="y"></span> Xi-Zhu Wang</span>
-    </footer>
+    <section id="experience" class="section shell"><div class="section-heading"><p class="eyebrow">EXPERIENCE &amp; TRAINING</p><h2>Technical depth, communication and automation</h2></div><div class="timeline"><article><time>2025</time><div><h3>Teaching Assistant · Computer Organization, NTUST</h3><p>Supported CPU datapath/control labs, RTL debugging and implementation exercises; developed Python/Shell grading automation.</p></div></article><article><time>2024–2026</time><div><h3>EDA Infrastructure &amp; Lab Support · NTUST</h3><p>Maintained shared EDA environments and helped research users reproduce flows, jobs and reports.</p></div></article><article><time>TSRI</time><div><h3>Selected IC Training</h3><p>Logic synthesis, ICC2 place-and-route, SystemVerilog, JasperGold formal property verification, HLS and emerging NVM arrays.</p></div></article></div></section>
+
+    <section id="contact" class="contact-section"><div class="shell contact-inner"><div><p class="eyebrow">CONTACT</p><h2>Let’s build reliable digital systems.</h2><p>Open to digital IC design, processor/SoC, design-verification, physical-design and EDA opportunities.</p></div><div class="contact-actions"><a class="button light" href="mailto:z790305000@gmail.com">z790305000@gmail.com</a><a class="button outline-light" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé PDF</a></div></div></section>
   </main>
-
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <footer class="footer shell"><span>© <span id="year"></span> Xi-Zhu Wang</span><span>Digital IC · SoC · HBM-PIM</span></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
