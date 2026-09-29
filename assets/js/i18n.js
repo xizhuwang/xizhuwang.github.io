@@ -28,8 +28,8 @@
     });
 
     document.title = lang === 'zh-Hant'
-      ? '王璽鑄｜數位 IC、SoC 與 HBM-PIM'
-      : 'Xi-Zhu Wang | Digital IC, SoC & HBM-PIM';
+      ? '王璽鑄｜記憶體可靠度與可重構 AI 加速器'
+      : 'Xi-Zhu Wang | Memory Reliability & Reconfigurable AI Acceleration';
   }
 
   buttons.forEach((button) => {
