@@ -150,23 +150,16 @@
     });
   });
 
-  const policyValues = { FP16: [54, 100], INT4: [100, 93.8], EDFMP: [91, 96.7], LAXMP: [91, 97.0], EDFMMP: [98, 96.1], LAXMMP: [96, 96.4] };
-  document.querySelectorAll('[data-chart-target]').forEach(button => {
+  document.querySelectorAll('[data-precision]').forEach(button => {
     button.addEventListener('click', () => {
-      document.querySelectorAll('[data-chart-target]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      document.querySelectorAll('[data-chart-panel]').forEach(panel => { panel.hidden = panel.dataset.chartPanel !== button.dataset.chartTarget; });
-    });
-  });
-  document.querySelectorAll('[data-policy]').forEach(button => {
-    button.addEventListener('click', () => {
-      const name = button.dataset.policy;
-      const [completed, quality] = policyValues[name];
-      const detail = document.querySelector('.policy-detail');
-      detail.dataset.en = `${name} · ${completed} on-time completions · approximately ${quality.toFixed(1)}% quality retention.`;
-      detail.dataset.zh = `${name} · ${completed} 筆準時完成 · 品質保留約 ${quality.toFixed(1)}%。`;
-      detail.textContent = detail.dataset[root.lang === 'zh-Hant' ? 'zh' : 'en'];
-      document.querySelectorAll('[data-policy]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-      document.querySelectorAll('[data-point]').forEach(point => point.classList.toggle('active', point.dataset.point === name));
+      const mode = button.dataset.precision;
+      document.querySelectorAll('[data-precision]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      document.querySelector('.precision-demo').classList.toggle('int4', mode === 'INT4');
+      document.getElementById('retention-number').textContent = mode === 'INT4' ? '59.7%' : '100.0%';
+      const summary = document.getElementById('precision-summary');
+      summary.dataset.en = mode === 'INT4' ? 'INT4: 59.7% GSM8K retention, with higher peak throughput in this example. Lower precision requires task-quality validation.' : 'FP16 is the quality reference. INT4 trades some quality for higher peak throughput in this example.';
+      summary.dataset.zh = mode === 'INT4' ? 'INT4：此例保留 59.7% GSM8K 品質並提升峰值吞吐量；降低精度需要驗證任務品質。' : 'FP16 為品質基準；此例中，INT4 以部分品質換取更高峰值吞吐量。';
+      summary.textContent = summary.dataset[root.lang === 'zh-Hant' ? 'zh' : 'en'];
     });
   });
 })();
