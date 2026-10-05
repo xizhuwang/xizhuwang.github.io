@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 700" fill="none">
+<defs><pattern id="cells" width="18" height="18" patternUnits="userSpaceOnUse"><rect width="11" height="11" x="3" y="3" fill="#b4b9fa" opacity=".65"/></pattern><pattern id="cores" width="32" height="32" patternUnits="userSpaceOnUse"><rect width="22" height="22" x="5" y="5" stroke="#c9cef7" stroke-width="1"/><rect width="10" height="10" x="11" y="11" fill="#c9cef7" opacity=".4"/></pattern><linearGradient id="plate" x2="1" y2="1"><stop stop-color="#323ae5"/><stop offset="1" stop-color="#101758"/></linearGradient></defs>
+<g stroke="#6368cf" opacity=".25"><circle cx="405" cy="357" r="275"/><circle cx="405" cy="357" r="310"/><path d="M45 357H765M405 20V690"/><path d="M75 82H740V636H75Z" stroke-dasharray="2 8"/></g>
+<g stroke="#4b52ca" stroke-width="2"><path d="M40 270H144L204 330M760 414H659L585 370M80 590H212L294 509M713 78V196L595 264"/><circle cx="40" cy="270" r="5" fill="#4b52ca"/><circle cx="760" cy="414" r="5" fill="#4b52ca"/><circle cx="80" cy="590" r="5" fill="#4b52ca"/><circle cx="713" cy="78" r="5" fill="#4b52ca"/></g>
+<g transform="translate(110 150) rotate(-30 285 210) skewX(30) scale(1 .78)">
+<path d="M0 390H565V425H0Z" fill="#121752"/><path d="M565 0V425L590 407V-18Z" fill="#080d39"/>
+<rect width="565" height="390" fill="#d7d9f0" stroke="#fff" stroke-width="2"/>
+<rect x="22" y="22" width="521" height="346" fill="url(#plate)"/>
+<g stroke="#777ddc" opacity=".6"><path d="M40 50H523M40 340H523M175 38V355M395 38V355"/><path d="M45 70V321M515 70V321"/></g>
+<rect x="198" y="100" width="174" height="190" rx="2" fill="#11194d" stroke="#c5cbff" stroke-width="2"/>
+<rect x="212" y="114" width="145" height="160" fill="url(#cores)"/>
+<g stroke="#c1c6ff" opacity=".7"><path d="M175 133H198M175 166H198M175 199H198M175 232H198M175 265H198M372 133H395M372 166H395M372 199H395M372 232H395M372 265H395"/></g>
+<g fill="#a5abfa"><rect x="62" y="71" width="91" height="230"/><rect x="415" y="71" width="91" height="230"/></g>
+<g fill="#1e247b"><rect x="69" y="79" width="77" height="214"/><rect x="422" y="79" width="77" height="214"/></g>
+<g fill="url(#cells)"><rect x="69" y="79" width="77" height="214"/><rect x="422" y="79" width="77" height="214"/></g>
+<g fill="#d6dcff"><rect x="213" y="50" width="148" height="12"/><rect x="213" y="325" width="148" height="12"/></g>
+<g fill="#eef0fa"><circle cx="12" cy="12" r="3"/><circle cx="553" cy="12" r="3"/><circle cx="12" cy="378" r="3"/><circle cx="553" cy="378" r="3"/></g>
+</g>
+<g font-family="monospace" font-size="12" letter-spacing="2" fill="#282d80"><text x="65" y="245">MEMORY</text><text x="618" y="446">COMPUTE</text><text x="90" y="621">RECONFIGURABLE</text><text x="536" y="60">HBM / PIM</text></g>
+</svg>

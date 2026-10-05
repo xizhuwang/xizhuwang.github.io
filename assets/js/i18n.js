@@ -10,7 +10,7 @@
 
     root.lang = lang;
     root.dataset.lang = lang;
-    localStorage.setItem('portfolio-lang', lang);
+    try { localStorage.setItem('portfolio-lang', lang); } catch (_) { /* Storage may be disabled. */ }
 
     document.querySelectorAll('[data-en][data-zh]').forEach((element) => {
       element.textContent = element.dataset[key];
@@ -58,6 +58,23 @@
   updateProgress();
 
   const navLinks = [...document.querySelectorAll('.nav a[href^="#"]')];
+  const nav = document.querySelector('.nav');
+  nav.id = 'section-navigation';
+  const menu = document.createElement('button');
+  menu.className = 'menu-toggle';
+  menu.type = 'button';
+  menu.textContent = '☰';
+  menu.setAttribute('aria-label', 'Navigation / 導覽');
+  menu.setAttribute('aria-controls', nav.id);
+  menu.setAttribute('aria-expanded', 'false');
+  document.querySelector('.header-actions').prepend(menu);
+  function closeMenu() { nav.classList.remove('is-open'); menu.setAttribute('aria-expanded', 'false'); }
+  menu.addEventListener('click', () => {
+    const open = nav.classList.toggle('is-open');
+    menu.setAttribute('aria-expanded', String(open));
+  });
+  navLinks.forEach(link => link.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && nav.classList.contains('is-open')) { closeMenu(); menu.focus(); } });
   const sectionById = new Map(
     navLinks
       .map((link) => [link.getAttribute('href').slice(1), link])
@@ -103,30 +120,33 @@
 
   document.querySelectorAll('.project-card').forEach((card, index) => {
     card.dataset.index = String(index + 1).padStart(2, '0');
-    card.addEventListener('pointermove', (event) => {
-      const bounds = card.getBoundingClientRect();
-      card.style.setProperty('--mx', `${event.clientX - bounds.left}px`);
-      card.style.setProperty('--my', `${event.clientY - bounds.top}px`);
-    }, { passive: true });
   });
 
-  const architecture = document.querySelector('.architecture');
-  const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (architecture && finePointer && !prefersReducedMotion) {
-    architecture.addEventListener('pointermove', (event) => {
-      const bounds = architecture.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width;
-      const y = (event.clientY - bounds.top) / bounds.height;
-      architecture.style.setProperty('--mx', `${x * 100}%`);
-      architecture.style.setProperty('--my', `${y * 100}%`);
-      architecture.style.setProperty('--ry', `${(x - .5) * 3.2}deg`);
-      architecture.style.setProperty('--rx', `${(.5 - y) * 3.2}deg`);
-    }, { passive: true });
-    architecture.addEventListener('pointerleave', () => {
-      architecture.style.setProperty('--ry', '0deg');
-      architecture.style.setProperty('--rx', '0deg');
-      architecture.style.setProperty('--mx', '80%');
-      architecture.style.setProperty('--my', '10%');
+  // Native dialog supplies Escape dismissal, focus containment and focus return.
+  const dialog = document.createElement('dialog');
+  dialog.className = 'layout-dialog';
+  dialog.setAttribute('aria-label', 'Physical layout viewer / 實體佈局檢視');
+  dialog.innerHTML = '<button type="button" class="layout-close" aria-label="Close image / 關閉圖片">×</button><img alt=""><p></p>';
+  document.body.append(dialog);
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+  document.querySelectorAll('.implementation-card figure').forEach((figure) => {
+    const image = figure.querySelector('img');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'layout-zoom';
+    button.setAttribute('aria-label', `View full layout / 放大佈局圖: ${image.alt}`);
+    image.replaceWith(button);
+    button.append(image);
+    const hint = document.createElement('span');
+    hint.textContent = '↗';
+    hint.setAttribute('aria-hidden', 'true');
+    button.append(hint);
+    button.addEventListener('click', () => {
+      dialog.querySelector('img').src = image.src;
+      dialog.querySelector('img').alt = image.alt;
+      dialog.querySelector('p').textContent = figure.closest('article').querySelector('h3').textContent;
+      dialog.showModal();
     });
-  }
+  });
 })();

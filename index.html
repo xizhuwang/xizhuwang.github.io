@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Xi-Zhu Wang | Digital IC, Memory Reliability &amp; HBM-PIM</title>
   <meta name="description" content="Xi-Zhu Wang — digital IC design, advanced flash-memory reliability, DFT, variable-precision HBM-PIM and reconfigurable AI acceleration." />
-  <meta name="theme-color" content="#071a2b" />
+  <meta name="theme-color" content="#f4f2eb" />
   <meta name="color-scheme" content="light" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="canonical" href="https://xizhuwang.github.io/" />
@@ -13,10 +13,10 @@
   <meta property="og:description" content="Flash-memory reliability · DFT · RTL · variable-precision HBM-PIM · reconfigurable AI acceleration" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://xizhuwang.github.io/" />
-  <meta property="og:image" content="assets/img/banner.png" />
+  <meta property="og:image" content="https://xizhuwang.github.io/assets/img/banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <script>document.documentElement.dataset.lang=localStorage.getItem('portfolio-lang')||(navigator.language.toLowerCase().startsWith('zh')?'zh-Hant':'en');</script>
-  <link rel="stylesheet" href="assets/css/style.css?v=20261005" />
+  <script>try{document.documentElement.dataset.lang=localStorage.getItem('portfolio-lang')||(navigator.language.toLowerCase().startsWith('zh')?'zh-Hant':'en')}catch(e){document.documentElement.dataset.lang='en'}</script>
+  <link rel="stylesheet" href="assets/css/style.css?v=20261005-r7" />
 </head>
 <body>
   <a class="skip-link" href="#main" data-en="Skip to content" data-zh="跳至主要內容">Skip to content</a>
@@ -32,14 +32,14 @@
     <section id="top" class="hero shell">
       <div class="hero-copy">
         <p class="eyebrow" data-en="DIGITAL IC · PROCESSOR / SOC · AI ACCELERATION" data-zh="數位 IC · 處理器／SoC · AI 加速器">DIGITAL IC · PROCESSOR / SOC · AI ACCELERATION</p>
-        <h1 data-en-html="Architecture to RTL.<br><span>Verification to silicon.</span>" data-zh-html="從架構到 RTL，<br><span>從驗證到晶片實作。</span>">Architecture to RTL.<br><span>Verification to silicon.</span></h1>
-        <p class="hero-lead" data-en="I am Xi-Zhu Wang, an NTUST electrical engineering graduate. From 2020 to 2024, I studied DFT-oriented reliability techniques for advanced flash memory. From 2024 to 2026, I focused on variable-precision processing-in-memory and reconfigurable, general-purpose AI acceleration." data-zh="我是王璽鑄，畢業於國立臺灣科技大學電機工程系與研究所。2020–2024 年研究先進快閃記憶體可靠度提升技術，以 DFT、故障偵測與位址重映射為主；2024–2026 年研究可變精度記憶體內運算，聚焦可重構通用 AI 加速器與 HBM-PIM 架構。">I am Xi-Zhu Wang, an NTUST electrical engineering graduate. From 2020 to 2024, I studied DFT-oriented reliability techniques for advanced flash memory. From 2024 to 2026, I focused on variable-precision processing-in-memory and reconfigurable, general-purpose AI acceleration.</p>
+        <h1 data-en-html="Memory.<br><span>Compute.</span><br>By design." data-zh-html="記憶體，<br><span>也是運算的起點。</span>">Memory.<br><span>Compute.</span><br>By design.</h1>
+        <p class="hero-lead" data-en="Xi-Zhu Wang · Digital IC engineer. Research in flash-memory reliability, DFT and reconfigurable HBM-PIM acceleration. From architecture and RTL to verified academic ASIC implementation." data-zh="王璽鑄 · 數位 IC 工程。研究快閃記憶體可靠度、DFT 與可重構 HBM-PIM 加速架構，從架構、RTL 到經驗證的學研 ASIC 實作。">Xi-Zhu Wang · Digital IC engineer. Research in flash-memory reliability, DFT and reconfigurable HBM-PIM acceleration. From architecture and RTL to verified academic ASIC implementation.</p>
         <p class="availability"><i aria-hidden="true"></i><span data-en="Graduated Aug. 2026" data-zh="2026 年 8 月畢業">Graduated Aug. 2026</span></p>
-        <div class="cta"><a class="button primary" href="assets/resume.pdf" target="_blank" rel="noopener" data-en="View CV" data-zh="查看英文履歷">View CV</a><a class="button" href="https://github.com/xizhuwang" target="_blank" rel="noopener" data-en="GitHub profile" data-zh="GitHub 專頁">GitHub profile</a><a class="button quiet" href="mailto:z790305000@gmail.com" data-en="Contact" data-zh="聯絡我">Contact</a></div>
+        <div class="cta"><a class="button primary" href="#work" data-en="Explore selected work" data-zh="查看代表專案">Explore selected work</a><a class="button" href="assets/resume.pdf" target="_blank" rel="noopener" data-en="View CV" data-zh="查看英文履歷">View CV</a><a class="button" href="https://github.com/xizhuwang" target="_blank" rel="noopener" data-en="GitHub profile" data-zh="GitHub 專頁">GitHub profile</a><a class="button quiet" href="mailto:z790305000@gmail.com" data-en="Contact" data-zh="聯絡我">Contact</a></div>
         <dl class="hero-stats"><div><dt>16 / 90 nm</dt><dd data-en="academic implementation flows" data-zh="學研製程實作經驗">academic implementation flows</dd></div><div><dt>ACM SAC 2026</dt><dd data-en="second-author publication" data-zh="第二作者論文">second-author publication</dd></div><div><dt>DFT → PIM</dt><dd data-en="research progression" data-zh="研究主軸演進">research progression</dd></div></dl>
         <a class="scroll-cue" href="#profile"><span data-en="Selected capabilities" data-zh="核心能力">Selected capabilities</span><i aria-hidden="true"></i></a>
       </div>
-      <div class="architecture" aria-label="System architecture relationship">
+      <figure class="hero-art"><img src="assets/img/memory-compute.svg" width="800" height="700" alt="Conceptual illustration of memory banks connected to reconfigurable compute; not a fabricated chip" data-alt-en="Conceptual illustration of memory banks connected to reconfigurable compute; not a fabricated chip" data-alt-zh="記憶體 Bank 與可重構運算的概念示意，非實際下線晶片"><figcaption><span>01 / MEMORY × COMPUTE</span><span data-en="Architecture study · conceptual illustration" data-zh="架構研究 · 概念示意">Architecture study · conceptual illustration</span></figcaption></figure><div class="architecture" aria-label="System architecture relationship">
         <div class="architecture-head"><span data-en="SYSTEM RELATIONSHIP" data-zh="系統關係">SYSTEM RELATIONSHIP</span><strong>CPU → HBM-PIM</strong></div>
         <ol>
           <li><span class="step">01</span><div><strong data-en="Compute masters" data-zh="運算主端">Compute masters</strong><small data-en="CPU · AI accelerator" data-zh="CPU · AI 加速器">CPU · AI accelerator</small></div></li>
@@ -67,11 +67,11 @@
     <section id="research" class="section section-tint"><div class="shell research-layout">
       <div class="research-copy">
         <p class="eyebrow" data-en="GRADUATE RESEARCH" data-zh="碩士研究">GRADUATE RESEARCH</p>
-        <h2>Adaptive Mixed-Precision Architecture for Multi-User Large Language Model Inference on HBM-Based Processing-in-Memory</h2>
+        <h2 data-en-html="Less movement.<br>More computation." data-zh-html="讓運算靠近資料。<br>讓精度隨需求改變。">Less movement.<br>More computation.</h2><p class="research-title">Adaptive Mixed-Precision Architecture for Multi-User Large Language Model Inference on HBM-Based Processing-in-Memory</p>
         <p data-en="This work develops a variable-precision, reconfigurable HBM-PIM accelerator for concurrent AI inference. It combines configurable compute, adaptive precision, scheduling and data mapping to improve effective throughput under bandwidth, capacity and latency constraints." data-zh="本研究開發面向多使用者 AI 推論的可變精度、可重構 HBM-PIM 加速器，整合可重構運算、精度調整、排程與資料映射，在頻寬、容量與延遲限制下提升有效吞吐量。">This work develops a variable-precision, reconfigurable HBM-PIM accelerator for concurrent AI inference. It combines configurable compute, adaptive precision, scheduling and data mapping to improve effective throughput under bandwidth, capacity and latency constraints.</p>
         <div class="publication"><span>ACM SAC 2026</span><p data-en-html="<strong>Second author</strong> · Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators" data-zh-html="<strong>第二作者</strong> · Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators"><strong>Second author</strong> · Adaptive Multi-User Scheduling for Large Language Model Inference on HBM-Based Processing-in-Memory Accelerators</p><a href="https://doi.org/10.1145/3748522.3779794" target="_blank" rel="noopener" data-en="Publication and DOI" data-zh="論文與 DOI">Publication and DOI</a></div>
       </div>
-      <div class="scope-grid">
+      <div class="research-visual"><img src="assets/img/projects/public/rs_hbmpim_apr_layout.png" width="700" height="600" loading="lazy" alt="APR layout of the Reed–Solomon HBM-PIM protection project"><span class="visual-label" data-en="Related implementation / RS HBM-PIM protection" data-zh="相關實作 / RS HBM-PIM 保護模組">Related implementation / RS HBM-PIM protection</span></div><div class="scope-grid">
         <article><span data-en="SYSTEM" data-zh="系統">SYSTEM</span><h3 data-en="Multi-user evaluation" data-zh="多使用者評估">Multi-user evaluation</h3><p data-en="Ramulator2-based evaluation for Llama 3.1 8B and Mixtral 8×7B workloads." data-zh="使用 Ramulator2 評估 Llama 3.1 8B 與 Mixtral 8×7B 工作負載。">Ramulator2-based evaluation for Llama 3.1 8B and Mixtral 8×7B workloads.</p></article>
         <article><span data-en="ARCHITECTURE" data-zh="架構">ARCHITECTURE</span><h3 data-en="Adaptive mixed precision" data-zh="自適應混合精度">Adaptive mixed precision</h3><p data-en="Precision selection, request scheduling, data mapping and contention analysis." data-zh="精度選擇、請求排程、資料映射與資源競爭分析。">Precision selection, request scheduling, data mapping and contention analysis.</p></article>
         <article><span data-en="HARDWARE" data-zh="硬體">HARDWARE</span><h3 data-en="Configurable compute unit" data-zh="可重構運算單元">Configurable compute unit</h3><p data-en="RTL verification, synthesis and physical implementation using a TSMC 16 nm ADFP academic flow." data-zh="以台積電 16 nm ADFP 學研流程完成 RTL 驗證、邏輯合成與實體設計。">RTL verification, synthesis and physical implementation using a TSMC 16 nm ADFP academic flow.</p></article>
@@ -122,6 +122,7 @@
     <section id="contact" class="contact-section"><div class="shell contact-inner"><div><p class="eyebrow" data-en="CONTACT" data-zh="聯絡方式">CONTACT</p><h2 data-en="Explore the work. Discuss the engineering." data-zh="歡迎交流專案與工程技術。">Explore the work. Discuss the engineering.</h2><p data-en="For technical discussion, collaboration or professional opportunities." data-zh="歡迎技術交流、研究合作與專業機會。">For technical discussion, collaboration or professional opportunities.</p></div><div class="contact-actions"><a class="button light" href="mailto:z790305000@gmail.com">z790305000@gmail.com</a><a class="button outline-light" href="assets/resume.pdf" target="_blank" rel="noopener" data-en="CV PDF" data-zh="英文履歷 PDF">CV PDF</a></div></div></section>
   </main>
   <footer class="footer shell"><span>© <span id="year"></span> Xi-Zhu Wang</span><span data-en="Digital IC · SoC · HBM-PIM" data-zh="數位 IC · SoC · HBM-PIM">Digital IC · SoC · HBM-PIM</span></footer>
-  <script src="assets/js/i18n.js?v=20261002"></script>
+  <script src="assets/js/i18n.js?v=20261005-r7"></script>
 </body>
 </html>
+
