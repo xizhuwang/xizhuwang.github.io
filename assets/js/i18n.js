@@ -162,4 +162,29 @@
       summary.textContent = summary.dataset[root.lang === 'zh-Hant' ? 'zh' : 'en'];
     });
   });
+
+  const projectDialog = document.createElement('dialog');
+  projectDialog.className = 'project-dialog';
+  projectDialog.setAttribute('aria-labelledby', 'project-dialog-title');
+  projectDialog.innerHTML = '<button class="project-close" type="button" aria-label="Close project / 關閉專案">×</button><div class="project-dialog-content"></div>';
+  document.body.append(projectDialog);
+  projectDialog.querySelector('.project-close').addEventListener('click', () => projectDialog.close());
+  projectDialog.addEventListener('click', event => { if (event.target === projectDialog) projectDialog.close(); });
+  document.querySelectorAll('.project-card').forEach(card => {
+    const button = document.createElement('button');
+    button.className = 'project-open'; button.type = 'button';
+    button.dataset.en = 'Project details +'; button.dataset.zh = '專案細節 +';
+    button.textContent = root.lang === 'zh-Hant' ? button.dataset.zh : button.dataset.en;
+    card.querySelector('.project-body').append(button);
+    button.addEventListener('click', () => {
+      const content = projectDialog.querySelector('.project-dialog-content');
+      content.replaceChildren();
+      const title = card.querySelector('h3').cloneNode(true); title.id = 'project-dialog-title'; content.append(title);
+      card.querySelectorAll('.project-body > p, .project-body > dl, .project-body > ul, .project-body > a').forEach(element => content.append(element.cloneNode(true)));
+      const extra = card.querySelector('.project-extra');
+      if (extra) content.insertBefore(extra.content.cloneNode(true), content.querySelector('a'));
+      applyLanguage(root.lang);
+      projectDialog.showModal();
+    });
+  });
 })();
