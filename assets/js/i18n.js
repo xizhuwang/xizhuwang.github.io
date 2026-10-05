@@ -149,4 +149,24 @@
       dialog.showModal();
     });
   });
+
+  const policyValues = { FP16: [54, 100], INT4: [100, 93.8], EDFMP: [91, 96.7], LAXMP: [91, 97.0], EDFMMP: [98, 96.1], LAXMMP: [96, 96.4] };
+  document.querySelectorAll('[data-chart-target]').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('[data-chart-target]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      document.querySelectorAll('[data-chart-panel]').forEach(panel => { panel.hidden = panel.dataset.chartPanel !== button.dataset.chartTarget; });
+    });
+  });
+  document.querySelectorAll('[data-policy]').forEach(button => {
+    button.addEventListener('click', () => {
+      const name = button.dataset.policy;
+      const [completed, quality] = policyValues[name];
+      const detail = document.querySelector('.policy-detail');
+      detail.dataset.en = `${name} · ${completed} on-time completions · approximately ${quality.toFixed(1)}% quality retention.`;
+      detail.dataset.zh = `${name} · ${completed} 筆準時完成 · 品質保留約 ${quality.toFixed(1)}%。`;
+      detail.textContent = detail.dataset[root.lang === 'zh-Hant' ? 'zh' : 'en'];
+      document.querySelectorAll('[data-policy]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+      document.querySelectorAll('[data-point]').forEach(point => point.classList.toggle('active', point.dataset.point === name));
+    });
+  });
 })();
