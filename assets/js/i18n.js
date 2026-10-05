@@ -143,7 +143,7 @@
     hint.setAttribute('aria-hidden', 'true');
     button.append(hint);
     button.addEventListener('click', () => {
-      dialog.querySelector('img').src = image.src;
+      dialog.querySelector('img').src = image.dataset.fullSrc || image.src;
       dialog.querySelector('img').alt = image.alt;
       dialog.querySelector('p').textContent = figure.closest('article').querySelector('h3').textContent;
       dialog.showModal();
